@@ -66,6 +66,6 @@ def clean_data(df):
 
     # Grab only the columns that our group found to be important
     df_cleaned = df[['fraud', 'delivery_method', 'fb_published', 'ticket_type_length', \
-        'gross_profits_dummies','channels', 'user_type', 'sale_duration2']].copy()
+        'gross_profits_dummie','channels', 'user_type', 'sale_duration2']].copy()
 
     return df_cleaned
