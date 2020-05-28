@@ -68,6 +68,6 @@ def clean_data(df):
     df_cleaned = df[['fraud', 'delivery_method', 'fb_published', 'ticket_type_length', \
         'gross_profits_dummie','channels', 'user_type', 'sale_duration2']].copy()
 
-    df_cleaned.to_csv('data/cleaned_df.csv', index=False)
+    #df_cleaned.to_csv('data/cleaned_df.csv', index=False)
 
     return df_cleaned
