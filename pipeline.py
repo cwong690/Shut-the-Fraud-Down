@@ -12,8 +12,8 @@ from predict import predict
 from pymongo import MongoClient
 client = MongoClient('localhost', 27017)
 db = client['frauds']
-table1 = db['new_events5']
-table2 = db['new_events6']
+table1 = db['new_events9']
+table2 = db['new_events10']
 
 def is_entry_new(object_id):
     '''
@@ -32,7 +32,9 @@ def risk_factor(df):
         'medium' if the prediction is greater than 0.5,
          and 'high' if the prediction is greater than 0.5.
     '''
-    if df['fraud_probability'] < 0.25:
+    if df['fraud_probability'] == 1:
+        df['risk_factor'] = 'Unable to Predict'
+    elif df['fraud_probability'] < 0.25:
         df['risk_factor'] = 'low'
     elif df['fraud_probability'] < 0.5:
         df['risk_factor'] = 'medium'
@@ -64,6 +66,7 @@ def pipeline():
 
             # create a dictionary that will be used to store items in mongodb
             d = {
+                'sequence': str(df_1['sequence_number']),
                 'object_id': str(df_1['object_id']),
                 'name': df_1['name'],
                 'org_name': df_1['org_name'],

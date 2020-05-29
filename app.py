@@ -15,7 +15,7 @@ app = Flask(__name__)
 @app.route('/',methods=['GET'])
 def home():
 
-    events = table.find()
+    events = table.find().sort([('sequence', -1)]).sort([('fraud_probability', -1)]).limit(50)
 
     # render the template and pass the events
     return render_template('home.html', data=events)
@@ -35,7 +35,7 @@ if __name__ == '__main__':
     # connect to database
     client = MongoClient('localhost', 27017)
     db = client['frauds']
-    table = db['new_events6']
+    table = db['new_events10']
     
     # run flask app
     app.run(host='0.0.0.0', port=8080, debug=True)

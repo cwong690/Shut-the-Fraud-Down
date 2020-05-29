@@ -18,6 +18,7 @@
 
         <table style="width:80%" border="4" id=table>
             <tr>
+                <th>Sequence</th>
                 <th>Object ID</th>
                 <th>Name</th>
                 <th>Org Name</th>
@@ -26,6 +27,7 @@
             </tr>
             {% for event in data %}
             <tr>
+                <td>{{event['sequence']}}</td>
                 <td>{{event['object_id']}}</td>
                 <td>{{event['name']}}</td>
                 <td>{{event['org_name']}}</td>

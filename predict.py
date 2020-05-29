@@ -46,10 +46,14 @@ def predict(request_info):
         model = pickle.load(mod)
 
     # calcluate the fraud probability of the input data using the model's predict_proba method
-    probs = model.predict_proba(X_test.reshape(1,-1))[:, 1]
+    # try the predict_proba. if it cannot be calculated, set it equal to 0.
+    try:
+        probs = model.predict_proba(X_test.reshape(1,-1))[:, 1]
+    except:
+        probs = [1,1]
 
     # add the probs to the original dataframe
-    request_info['fraud_probability'] = probs[0]
+    request_info['fraud_probability'] = np.around(probs[0], 3)
 
     # return the dataframe with the predictions
     return request_info
