@@ -23,7 +23,7 @@ def gross_profit_dummie(x):
 
 def clean_new_data(df):
     '''
-    Cleans the input dataframe.
+    Cleans the input dataframe. Dataframe is a SINGLE entry (i.e., a series)
     '''
     ### DELETE THIS SINCE NEW DATA WON'T HAVE FRAUD OR NOT ###
     # Create a new column called 'fraud' that contains if the account is fradulent
@@ -32,32 +32,32 @@ def clean_new_data(df):
     
 
     # Fill NA values of column 'delivery_method' with 4
-    df['delivery_method'].fillna(4, inplace=True)
+    delivery_methods = [0., 1., 3.]
+    if df['delivery_method'] not in delivery_methods:
+        df['delivery_method']=4
 
 
-    # Create a new column called 'previous_payouts_length_ which will be 0
+    # Create a new column called 'previous_payouts_length_' which will be 0
     # if the length is zero, otherwise it is 1.
-    df['previous_payouts_length'] = df['previous_payouts'].apply(lambda x: len(x))
-    df['previous_payouts_length_'] = df['previous_payouts_length'].apply(lambda x: 1 if x>1 else 0)
+    df['previous_payouts_length'] = len(df['previous_payouts'])
+    df['previous_payouts_length_'] = int(df['previous_payouts_length'] > 1)
 
     # fb_published was found to have a high indication during eda, don't need to filter it
 
     # Create a new column called 'ticket_type_length' which will be True if the length of ticket_type is 0
-    df['ticket_type_length'] = (df['ticket_types'].apply(lambda x: len(x)) < 1)
+    df['ticket_type_length'] = len(df['ticket_types']) < 1
 
     ### Gross Profits ###
     # Create a new column called 'gross_profits' that multiples the cost of each ticket
     # in ticket_types by the quanitity sold. This will then be used as a dummie variable.
-    gross_profits_list = []
-    for row in df['ticket_types']:
-        gross_profits = 0
-        for i in range(len(row)):
-            gross_profits += row[i]['cost'] * row[i]['quantity_sold']
-        gross_profits_list.append(gross_profits)
-    df['gross_profits'] = gross_profits_list
+    #gross_profits_list = []
+    gross_profits = 0
+    for j in df['ticket_types']:
+        gross_profits += j['cost'] * j['quantity_sold']
+    df['gross_profits'] = gross_profits
 
     # Create a new column called gross_profits_dummies that will use gross_profit_dummie function
-    df['gross_profits_dummie'] = df['gross_profits'].apply(lambda x: gross_profit_dummie(x))
+    df['gross_profits_dummie'] = gross_profit_dummie(df['gross_profits'])
 
     # channels was found to have a high indiction during eda, don't need to filter it
 

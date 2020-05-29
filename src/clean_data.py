@@ -65,9 +65,9 @@ def clean_data(df):
     # sale_duration2 was found to have a high indction during ead, don't need to filter it
 
     # Grab only the columns that our group found to be important
-    df_cleaned = df[['fraud', 'delivery_method', 'fb_published', 'ticket_type_length', \
+    df_cleaned = df[['fraud', 'delivery_method','fb_published', 'ticket_type_length', \
         'gross_profits_dummie','channels', 'user_type', 'sale_duration2']].copy()
 
-    #df_cleaned.to_csv('data/cleaned_df.csv', index=False)
+    df_cleaned.to_csv('data/cleaned_df.csv', index=False)
 
     return df_cleaned
