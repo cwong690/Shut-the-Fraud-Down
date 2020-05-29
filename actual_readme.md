@@ -34,12 +34,14 @@ Fraudelent categories
    Channels vs Fraud       |  Delivery Method vs Fraud |     Gross Profits vs Fraud
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](images/channels_eda.png) |   ![](images/delivery_method_eda.png)|    ![gross profits](images/gross_profits_dummie.png)
-   FB Published vs Fraud       |  Ticket Length vs Fraud |     User Type vs Fraud
+
+   FB Published vs Fraud   |  Ticket Length vs Fraud   |     User Type vs Fraud
 :-------------------------:|:-------------------------:|:-------------------------:
-![](images/fb_published.png) |   ![](images/ticket_type_length.png)|    ![gross profits](images/user_type.png)
-   Sale Duration vs Fraud       |  Gmail vs Fraud |     Previous Payout vs Fraud
+![](images/fb_published.png)|   ![](images/ticket_type_length.png)|    ![gross profits](images/user_type.png)
+
+   Sale Duration vs Fraud  |  Gmail vs Fraud           |     Previous Payout vs Fraud
 :-------------------------:|:-------------------------:|:-------------------------:
-![](images/sale_duration.png) |   ![](images/gmail_account_eda.png)|    ![gross profits](images/previous_payouts_eda.png)
+![](images/sale_duration.png)|   ![](images/gmail_account_eda.png)|    ![gross profits](images/previous_payouts_eda.png)
 
 
 <!-- <img alt="" src='' style='width: 600px;'> -->
