@@ -1,5 +1,5 @@
 '''
-This script will read in NEW raw json info,
+This script will read in NEW pandas datframe info,
 Make a prediction on it (probability that it is fraud),
 and then return a dataframe with that prediction on it.
 '''
@@ -32,7 +32,6 @@ def predict(request_info):
     inputs
     ------
     request_info: pandas dataframe 
-    #json formatted info that will be used to make new predictions
     '''
 
     # load request_info into a pandas dataframe and clean it using clean_new_data

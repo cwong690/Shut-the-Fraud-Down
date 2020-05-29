@@ -13,6 +13,30 @@
     <h1 style="color:forestgreen">The Fradulent Activity Detector</h1>
     <p>This app will find and detect fraudulent activity.</p>
 
+    <div class="container">
+        <p>Events:</p>
+
+        <table style="width:80%" border="4" id=table>
+            <tr>
+                <th>Object ID</th>
+                <th>Name</th>
+                <th>Org Name</th>
+                <th>Fraud Probability</th>
+                <th>Risk Factor</th>
+            </tr>
+            {% for event in data %}
+            <tr>
+                <td>{{event['object_id']}}</td>
+                <td>{{event['name']}}</td>
+                <td>{{event['org_name']}}</td>
+                <td>{{event['fraud_probability']}}</td>
+                <td>{{event['risk_factor']}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+
 </body>
 
 </html>
