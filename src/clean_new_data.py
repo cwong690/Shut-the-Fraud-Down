@@ -53,7 +53,7 @@ def clean_new_data(df):
     #gross_profits_list = []
     gross_profits = 0
     for j in df['ticket_types']:
-        gross_profits += j['cost'] * j['quantity_sold']
+        gross_profits += j['cost'] * j['quantity_total']
     df['gross_profits'] = gross_profits
 
     # Create a new column called gross_profits_dummies that will use gross_profit_dummie function
@@ -67,7 +67,7 @@ def clean_new_data(df):
 
     # Grab only the columns that our group found to be important
     df_cleaned = df[['delivery_method', 'fb_published', 'ticket_type_length', \
-        'gross_profits_dummie','channels', 'user_type', 'sale_duration2']].copy()
+        'gross_profits_dummie','channels', 'user_type', 'sale_duration']].copy()
 
     #df_cleaned.to_csv('data/cleaned_df.csv', index=False)
 
