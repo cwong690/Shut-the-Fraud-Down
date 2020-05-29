@@ -14,10 +14,6 @@ app = Flask(__name__)
 # Render home page
 @app.route('/',methods=['GET'])
 def home():
-    # connect to database
-    client = MongoClient('localhost', 27017)
-    db = client['frauds']
-    table = db['new_events12']
 
     events = table.find().sort([('sequence', -1)]).sort([('fraud_probability', -1)]).limit(50)
     legend = 'Risk Level'
@@ -35,7 +31,7 @@ def home():
     labels = ['unable','low', 'medium', 'high']
 
     # render the template and pass the events
-    return render_template('second_home.html', data=events, unable=unable, low=low, medium=medium, high=high, labels=labels, legend=legend)
+    return render_template('home.html', data=events, unable=unable, low=low, medium=medium, high=high, labels=labels, legend=legend)
 
 # Execute logic of prediction
 @app.route('/score', methods=['POST'])
