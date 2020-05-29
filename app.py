@@ -16,9 +16,22 @@ app = Flask(__name__)
 def home():
 
     events = table.find().sort([('sequence', -1)]).sort([('fraud_probability', -1)]).limit(50)
+    legend = 'Risk Level'
+    entries = table.find().sort([('sequence', -1)]).sort([('fraud_probability', -1)]).limit(1000)
+    unable, low, medium, high= 0, 0, 0, 0
+    for each_ in entries:
+        if each_['risk_factor'] == 'Unable to Predict':
+            unable += 1
+        elif each_['risk_factor'] == 'low':
+            low += 1
+        elif each_['risk_factor'] == 'medium':
+            medium += 1
+        else:
+            high += 1
+    labels = ['unable','low', 'medium', 'high']
 
     # render the template and pass the events
-    return render_template('home.html', data=events)
+    return render_template('second_home.html', data=events, unable=unable, low=low, medium=medium, high=high, labels=labels, legend=legend)
 
 # Execute logic of prediction
 @app.route('/score', methods=['POST'])
