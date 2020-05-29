@@ -44,7 +44,7 @@
 
     </div>
 
-    <canvas id="moreChart"></canvas>
+    <canvas id="moreChart" width="1000px" height="700px"></canvas>
     <script>
     
     // get chart canvas
@@ -93,6 +93,7 @@
       type: 'bar',
       data: chartData,
       options: {
+          responsive: false,
           tooltips: {
             enabled: true,
             mode: 'single',
