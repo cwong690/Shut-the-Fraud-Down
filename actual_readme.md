@@ -41,7 +41,7 @@ Fraudelent categories
 
    Sale Duration vs Fraud  |  Gmail vs Fraud           |     Previous Payout vs Fraud
 :-------------------------:|:-------------------------:|:-------------------------:
-![](images/sale_duration.png)|   ![](images/gmail_account_eda.png)|    ![gross profits](images/previous_payouts_eda.png)
+![](images/sale_duration2.png)|   ![](images/gmail_account_eda.png)|    ![gross profits](images/previous_payouts_eda.png)
 
 
 <!-- <img alt="" src='' style='width: 600px;'> -->
