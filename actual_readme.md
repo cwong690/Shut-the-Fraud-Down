@@ -31,9 +31,9 @@
 
 Fraudelent categories
 
-   Low Risk                |  Medium Risk              |     High Risk
+   Channels vs Fraud       |  Delivery Method vs Fraud |     Gross Profits vs Fraud
 :-------------------------:|:-------------------------:|:-------------------------:
-![](                 )     |   ![](                 )  |    ![]( )
+!(images/channels_eda.png) |   ![](images/delivery_method_eda.png)|    ![gross profits](images/gross_profits_dummie.png)
 
 
 <!-- <img alt="" src='' style='width: 600px;'> -->
