@@ -14,6 +14,10 @@ app = Flask(__name__)
 # Render home page
 @app.route('/',methods=['GET'])
 def home():
+    # connect to database
+    client = MongoClient('localhost', 27017)
+    db = client['frauds']
+    table = db['new_events12']
 
     events = table.find().sort([('sequence', -1)]).sort([('fraud_probability', -1)]).limit(50)
     legend = 'Risk Level'
