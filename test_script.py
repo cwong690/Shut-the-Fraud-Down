@@ -9,7 +9,7 @@ If it is new, send the sample of one to the prediction.
 
 import pandas as pd 
 import numpy as np 
-import requests
+#import requests
 
 from predict import predict
 
