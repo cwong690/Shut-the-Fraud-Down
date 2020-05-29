@@ -7,7 +7,7 @@ from pipeline import pipeline
 
 client = MongoClient('localhost', 27017)
 db = client['frauds']
-table = db['new_events9']
+table = db['new_events11']
 
 class EventAPIClient:
     """Realtime Events API Client"""

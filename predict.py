@@ -54,6 +54,7 @@ def predict(request_info):
 
     # add the probs to the original dataframe
     request_info['fraud_probability'] = np.around(probs[0], 3)
+    #print(request_info['fraud_probability'])
 
     # return the dataframe with the predictions
     return request_info

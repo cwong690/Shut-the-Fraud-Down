@@ -12,8 +12,8 @@ from predict import predict
 from pymongo import MongoClient
 client = MongoClient('localhost', 27017)
 db = client['frauds']
-table1 = db['new_events9']
-table2 = db['new_events10']
+table1 = db['new_events11']
+table2 = db['new_events12']
 
 def is_entry_new(object_id):
     '''

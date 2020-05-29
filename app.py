@@ -35,7 +35,7 @@ if __name__ == '__main__':
     # connect to database
     client = MongoClient('localhost', 27017)
     db = client['frauds']
-    table = db['new_events10']
+    table = db['new_events12']
     
     # run flask app
     app.run(host='0.0.0.0', port=8080, debug=True)
