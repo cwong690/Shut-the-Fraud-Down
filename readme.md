@@ -1,30 +1,82 @@
-# Fraud Detection Case Study
+<!-- <img alt="" src='' height="600px" width="1000px" align='center'> -->
 
-For the next two days we will work with the entire end to end pipeline of data science through a case study.  We have touched on aspects of this throughout the course but have not yet put all the pieces together.
+# Fraud Case Study
 
-Topics included in this case study include:
-* Classification modeling.
-* Programming Practice: Handing off models. 
-* Teamwork.
-* Web applications.
-* Website hosting with AWS
-* Deploying a DS application.
-* Data visualization.
-* Results presentation.
+![badge](https://img.shields.io/badge/last%20modified-may%20%202020-success)
+![badge](https://img.shields.io/badge/status-in%20progress-yellow)
 
-#### Rough timeline 
+## Table of Contents
 
-* Day 1: Project scoping, Team direction, Model building
-* Day 2: Web app and deployment
+- [Overview](#overview)
+- [Data Preparation](#data-preparation)
+    - [EDA](#eda)
+- [Models](#models)
+- [Summary](#summary)
+- [Notes](#notes)
+- [Future Work](#future-work)
 
-#### Deliverables
+## Overview
 
-We will want two deliverables from you for this project:
 
-* A dashboard for investigators to use which helps them identify new events that are worthy of investigation for fraud.  This will pull in new data regularly, and update a useful display for the investigation team.  How you wish to lay this out is up to you.
-* A ten-minute presentation on your process and results. 
+## Data Preparation
 
-#### Notes
+<details>
+  <summary>
+    <b> Dataset </b>  
+  </summary>
+</details>
 
-* [Overview](overview.md): gives a detailed overview of the project.  Included are *suggestions* for how you can organize your team, though this is not binding, and you are free to deviate.
-* [Building your model](model_notes.md): notes on how to get started with the dataset and how to save your model once you've trained it.
+
+### EDA
+
+Fraudelent categories
+
+   Channels vs Fraud       |  Delivery Method vs Fraud |     Gross Profits vs Fraud
+:-------------------------:|:-------------------------:|:-------------------------:
+![](images/channels_eda.png) |   ![](images/delivery_method_eda.png)|    ![gross profits](images/gross_profits_dummie.png)
+
+   FB Published vs Fraud   |  Ticket Length vs Fraud   |     User Type vs Fraud
+:-------------------------:|:-------------------------:|:-------------------------:
+![](images/fb_published.png)|   ![](images/ticket_type_length.png)|    ![gross profits](images/user_type.png)
+
+   Sale Duration vs Fraud  |  Gmail vs Fraud           |     Previous Payout vs Fraud
+:-------------------------:|:-------------------------:|:-------------------------:
+![](images/sale_duration2.png)|   ![](images/gmail_account_eda.png)|    ![gross profits](images/previous_payouts_eda.png)
+
+
+<!-- <img alt="" src='' style='width: 600px;'> -->
+
+
+## Models
+
+
+<details>
+    <summary>Logistic Regression</summary>
+<!--     <img alt="" src=''> -->
+</details>   
+
+<details>
+    <summary>Random Forest Classifier</summary>
+<!--     <img alt="" src=''> -->
+</details>
+
+<details>
+    <summary>XGBoost</summary>
+<!--     <img alt="" src=''> -->
+</details>
+
+<details>
+    <summary>Gradient Boosting</summary>
+<!--     <img alt="" src=''> -->
+</details>
+
+## Summary
+
+## Notes
+
+
+## Future Work
+
+- [ ] KNN
+- [ ] Better Model
+- [ ] Clean up files
