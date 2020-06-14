@@ -6,3 +6,5 @@
 *.DS_Store
 data.json
 *.csv
+package-lock.json
+data/
