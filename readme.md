@@ -17,6 +17,12 @@
 
 ## Overview
 
+<b>Premise:</b>
+A new e-commerce site needs a data scientist to detect fraudsters. A machine learning model needs to be created. However, failures are not equal. False positives will decrease trust with consumers and false negatives will cost money.
+
+The model does not predict a ground truth, but rather flags ones that have high potential.
+The interactive portion of the web app allows users to see which cases are the top priorities to check and attributes about that case.
+
 
 ## Data Preparation
 
