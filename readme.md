@@ -1,9 +1,13 @@
 <!-- <img alt="" src='' height="600px" width="1000px" align='center'> -->
 
-# Fraud Case Study
+# Shut the FRAUD Down!
+
+### A fraud detection model with an interactive Flask app to stream events and automatically detect fraudulent cases!
 
 ![badge](https://img.shields.io/badge/last%20modified-may%20%202020-success)
 ![badge](https://img.shields.io/badge/status-in%20progress-yellow)
+
+<a href="https://github.com/b-weintraub">Ben Weintraub</a> | <a href="https://github.com/cwong90">Cindy Wong</a> | <a href="https://github.com/tylerjwoods">Tyler Woods</a>
 
 ## Table of Contents
 
