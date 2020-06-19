@@ -62,23 +62,21 @@ Fraudelent categories
 
 <details>
     <summary>Logistic Regression</summary>
-<!--     <img alt="" src=''> -->
+    <img alt="log roc" src='images/logistic_reg_roc_curve.png'>
 </details>   
 
 <details>
     <summary>Random Forest Classifier</summary>
-<!--     <img alt="" src=''> -->
-</details>
-
-<details>
-    <summary>XGBoost</summary>
-<!--     <img alt="" src=''> -->
+    <img alt="rf kfolds" src='images/rf_kfolds_10.png'>
 </details>
 
 <details>
     <summary>Gradient Boosting</summary>
-<!--     <img alt="" src=''> -->
+    <img alt="" src='images/gradient_boost_roc_curve.png'>
 </details>
+
+### Combined ROC Curves Comparison
+<img alt="combined roc" src='images/ROC_curves.png'>
 
 ## Summary
 
