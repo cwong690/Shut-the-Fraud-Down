@@ -31,9 +31,12 @@ The interactive portion of the web app allows users to see which cases are the t
 ## Data Preparation
 
 <details>
-  <summary>
-    <b> Dataset </b>  
-  </summary>
+  <summary><b> Dataset </b></summary>
+  <img alt='dataset' src='images/dataset.png'>
+  <img alt='dataset info' src='images/dataset_info.png'>  
+  <br>
+  <p> Quick statistics of the columns </p>
+  <img alt='dataset stats' src='images/dataset_descr.png'>  
 </details>
 
 
