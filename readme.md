@@ -15,8 +15,7 @@
 - [Data Preparation](#data-preparation)
     - [EDA](#eda)
 - [Models](#models)
-- [Summary](#summary)
-- [Notes](#notes)
+- [Fraudulent Activity Detector](#fraudulent)
 - [Future Work](#future-work)
 
 ## Overview
@@ -42,7 +41,11 @@ The interactive portion of the web app allows users to see which cases are the t
 
 ### EDA
 
-Fraudelent categories
+We started off with a heatmap of correlation between the target value (fraud or not fraud) and all the other columns.
+
+<img alt="corr heatmap" src='images/col_heatmap.png'>
+
+There appears to be columns that have higher correlations to being fraud. The bar plots below will show the number of fraudulent for different values within each category. For example, the higher the delivery method number, the less likely it is a fraudelent case.
 
    Channels vs Fraud       |  Delivery Method vs Fraud |     Gross Profits vs Fraud
 :-------------------------:|:-------------------------:|:-------------------------:
@@ -56,13 +59,16 @@ Fraudelent categories
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](images/sale_duration2.png)|   ![](images/gmail_account_eda.png)|    ![gross profits](images/previous_payouts_eda.png)
 
-
-<!-- <img alt="" src='' style='width: 600px;'> -->
-
-
 ## Models
 
+Using Random Forest, feature importance were revealed:
 
+<img alt="feature importance" src='images/rf_feat_importance.png' style='width: 600px;'>
+<br>
+
+<p> 3 separate models were built in order to determine the best one for this problem. Below are the ROC curves for each model.</p>
+<br>
+    
 <details>
     <summary>Logistic Regression</summary>
     <img alt="log roc" src='images/logistic_reg_roc_curve.png'>
@@ -81,10 +87,19 @@ Fraudelent categories
 ### Combined ROC Curves Comparison
 <img alt="combined roc" src='images/ROC_curves.png'>
 
-## Summary
+## Fraudulent Activity Detector
 
-## Notes
+The model and the data are store in MongoDB and connected through PyMongo. Below is an example of a piece of data, stored in dictionary form, inserted into MongoDB:
 
+<img alt="mongodb" src='images/mongodata.png'>
+
+The Fraudulent Activity Detector allows clients to quickly the latest records and the prediction of risk level for each case. There are 4 levels of fraudulent cases: low risk, medium risk, high risk, and unable to predict risk.
+
+The chart below is an easy visualization of how many cases are in each category. It is highly suggested for the cases that are unabled to receive a prediction to be checked by an employee as well as the high risk cases.
+
+Descriptions of the events are recorded as well in order to track down any leads.
+
+<img alt="combined roc" src='images/shutthefrauddown.gif'>
 
 ## Future Work
 

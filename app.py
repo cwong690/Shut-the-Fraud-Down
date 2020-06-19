@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 from predict import predict
-from test_script import test_script
+from src.test_script import test_script
 
 from pymongo import MongoClient
 
